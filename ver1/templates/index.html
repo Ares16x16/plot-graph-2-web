@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+    </head>
+    <body>
+        {% block body %}
+            {% if number == "0" %}
+                <section class="gallery">
+                    <div class="gallery__item">
+                        <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
+                        <img class="gallery__img" src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/>
+                        <label for="img-1" class="gallery__thumb"><img src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/></label>
+                    </div>
+                    <div class="gallery__item">
+                        <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
+                        <img class="gallery__img" src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/>
+                        <label for="img-2" class="gallery__thumb"><img src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/></label>
+                    </div>
+                    <div class="gallery__item">
+                        <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
+                        <img class="gallery__img" src="data:image/png;base64,{{ ph_string }}" alt="pH" />
+                        <label for="img-3" class="gallery__thumb"><img src="data:image/png;base64,{{ ph_string }}" alt="pH" /></label>
+                    </div>
+                    <div class="gallery__item">
+                        <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
+                        <img class="gallery__img" src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/>
+                        <label for="img-4" class="gallery__thumb"><img src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/></label>
+                    </div>
+                    <div class="gallery__item">
+                        <input type="radio" id="img-5" name="gallery" class="gallery__selector"/>
+                        <img class="gallery__img" src="data:image/png;base64,{{ v_string }}" alt="V"/>
+                        <label for="img-5" class="gallery__thumb"><img src="data:image/png;base64,{{ v_string }}" alt="V"/></label>
+                    </div>
+                </section>
+                {% elif number == "1" %}
+                    <section class="gallery">
+                        <div class="gallery__item">
+                            <input type="radio" id="img-1" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/>
+                            <label for="img-1" class="gallery__thumb"><img src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-2" checked name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/>
+                            <label for="img-2" class="gallery__thumb"><img src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ ph_string }}" alt="pH" />
+                            <label for="img-3" class="gallery__thumb"><img src="data:image/png;base64,{{ ph_string }}" alt="pH" /></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/>
+                            <label for="img-4" class="gallery__thumb"><img src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-5" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ v_string }}" alt="V"/>
+                            <label for="img-5" class="gallery__thumb"><img src="data:image/png;base64,{{ v_string }}" alt="V"/></label>
+                        </div>
+                    </section>
+                {% elif number == "2" %}
+                    <section class="gallery">
+                        <div class="gallery__item">
+                            <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/>
+                            <label for="img-1" class="gallery__thumb"><img src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/>
+                            <label for="img-2" class="gallery__thumb"><img src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-3" checked name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ ph_string }}" alt="pH" />
+                            <label for="img-3" class="gallery__thumb"><img src="data:image/png;base64,{{ ph_string }}" alt="pH" /></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/>
+                            <label for="img-4" class="gallery__thumb"><img src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-5" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ v_string }}" alt="V"/>
+                            <label for="img-5" class="gallery__thumb"><img src="data:image/png;base64,{{ v_string }}" alt="V"/></label>
+                        </div>
+                    </section>
+                {% elif number == "3" %}
+                    <section class="gallery">
+                        <div class="gallery__item">
+                            <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/>
+                            <label for="img-1" class="gallery__thumb"><img src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/>
+                            <label for="img-2" class="gallery__thumb"><img src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ ph_string }}" alt="pH" />
+                            <label for="img-3" class="gallery__thumb"><img src="data:image/png;base64,{{ ph_string }}" alt="pH" /></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-4" checked name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/>
+                            <label for="img-4" class="gallery__thumb"><img src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-5" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ v_string }}" alt="V"/>
+                            <label for="img-5" class="gallery__thumb"><img src="data:image/png;base64,{{ v_string }}" alt="V"/></label>
+                        </div>
+                    </section>
+                {% elif number == "4" %}
+                    <section class="gallery">
+                        <div class="gallery__item">
+                            <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/>
+                            <label for="img-1" class="gallery__thumb"><img src="data:image/png;base64,{{ temp_string }}" alt="Temperature"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/>
+                            <label for="img-2" class="gallery__thumb"><img src="data:image/png;base64,{{ wet_string }}" alt="Wetness"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ ph_string }}" alt="pH" />
+                            <label for="img-3" class="gallery__thumb"><img src="data:image/png;base64,{{ ph_string }}" alt="pH" /></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/>
+                            <label for="img-4" class="gallery__thumb"><img src="data:image/png;base64,{{ ldr_string }}" alt="LDR"/></label>
+                        </div>
+                        <div class="gallery__item">
+                            <input type="radio" id="img-5" checked name="gallery" class="gallery__selector"/>
+                            <img class="gallery__img" src="data:image/png;base64,{{ v_string }}" alt="V"/>
+                            <label for="img-5" class="gallery__thumb"><img src="data:image/png;base64,{{ v_string }}" alt="V"/></label>
+                        </div>
+                    </section>
+            {% else %}
+                TO ADD
+            {% endif %}
+        {% endblock %}
+    </body>
+    <div id="autorefresh">Auto Refresh in <span id="counter" class="counter">5</span> seconds</div>
+</html>

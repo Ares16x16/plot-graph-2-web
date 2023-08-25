@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .image-container {
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        #autorefresh {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: #f5f5f5;
+            padding: 10px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        .counter {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+    <script>
+        var count = 5;
+        var x = setInterval(function() {
+            count--;
+            document.getElementById("counter").innerHTML = count;
+            if (count == 0) {
+                clearInterval(x);
+                location.reload();
+            }
+        }, 1000);
+    </script>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <div class="image-container">
+        <img src="data:image/png;base64,{{ temp_string }}" alt="Temperature" />
+    </div>
+    <div class="image-container">
+        <img src="data:image/png;base64,{{ wet_string }}" alt="Wetness" />
+    </div>
+    <div class="image-container">
+        <img src="data:image/png;base64,{{ ph_string }}" alt="pH" />
+    </div>
+    <div class="image-container">
+        <img src="data:image/png;base64,{{ ldr_string }}" alt="LDR" />
+    </div>
+    <div id="autorefresh">Auto Refresh in <span id="counter" class="counter">5</span> seconds</div>
+</body>
+</html>

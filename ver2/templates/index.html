@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Display Ver2</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-home">
+            <a href="#">Home</a>
+        </div>
+        <div class="navbar-counter">
+            AUTO REFRESH: <span id="counter" class="counter">10</span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="left-container">
+            <div class="top-left-section">
+                <img src="static\images\Kfarm_Logo_wo_bg.png" alt="Image" class="logo-image">
+            </div>
+        </div>
+        <div class="right-container">
+            <div id="graph"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

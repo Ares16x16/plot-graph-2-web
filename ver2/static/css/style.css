@@ -1,0 +1,109 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-home {
+    font-size: 24px;
+    position: relative;
+  }
+  
+  .navbar-home a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-home a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    background-color: #23cd72;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-home a:hover::before {
+    transform: scaleX(1);
+  }
+
+  .navbar-logo img {
+    height: 40px;
+  }
+  
+  .navbar-counter {
+    font-size: 15px;
+    position: relative;
+    color: #129e20;
+    animation: countdown 1s infinite;
+    display: flex;
+    align-items: center;
+  }
+  
+  @keyframes countdown {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  .left-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-container {
+    flex: 4;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .logo-image {
+    max-width: 8  0%;
+    max-height: 80%;
+  }
+  
+  .bottom-left-section {
+    flex: 1;
+  }
+  
+
+  #graph {
+    width: 80%;
+    height: 80%;
+    margin: 20px;
+  }
